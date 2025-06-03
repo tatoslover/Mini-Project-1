@@ -1,9 +1,9 @@
 const pageContent = document.getElementById("page-content");
 
 const tabs = {
-  navAbout: "pages/about.html",
-  navPlayers: "pages/players.html",
-  navArena: "pages/arena.html",
+  navAbout: "pages/about",
+  navPlayers: "pages/players",
+  navArena: "pages/arena",
 };
 
 async function loadTabContent(navId) {
@@ -21,7 +21,7 @@ async function loadTabContent(navId) {
     if (navId === "navPlayers") {
       // Small delay to ensure scripts are loaded
       setTimeout(() => {
-        if (typeof initializePlayersTab === 'function') {
+        if (typeof initializePlayersTab === "function") {
           initializePlayersTab();
         } else {
           console.error("initializePlayersTab function not available");
@@ -31,7 +31,7 @@ async function loadTabContent(navId) {
     } else if (navId === "navArena") {
       // Small delay to ensure scripts are loaded
       setTimeout(() => {
-        if (typeof initializeArenaTab === 'function') {
+        if (typeof initializeArenaTab === "function") {
           initializeArenaTab();
         } else {
           console.error("initializeArenaTab function not available");
