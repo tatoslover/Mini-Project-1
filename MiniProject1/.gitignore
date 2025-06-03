@@ -1,0 +1,20 @@
+# Ignore node modules
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore environment files
+.env
+
+# Ignore all files in the /build directory
+build/
+
+# Ignore all .tmp files anywhere
+*.tmp
+
+# Except keep this file
+!important.log

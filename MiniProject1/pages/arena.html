@@ -1,0 +1,136 @@
+<section id="tab-arena">
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <!-- Player 1 Section -->
+            <div class="col-lg-5 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4 class="mb-0"><i class="fas fa-user me-2"></i>Player 1</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Player 1 Team Filter -->
+                        <div class="mb-3">
+                            <label for="player1TeamFilter" class="form-label">Filter by Team:</label>
+                            <select id="player1TeamFilter" class="form-select">
+                                <option value="">All Teams</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Player 1 Position Filter -->
+                        <div class="mb-3">
+                            <label for="player1PositionFilter" class="form-label">Filter by Position:</label>
+                            <select id="player1PositionFilter" class="form-select">
+                                <option value="">All Positions</option>
+                                <option value="PG">Point Guard (PG)</option>
+                                <option value="SG">Shooting Guard (SG)</option>
+                                <option value="SF">Small Forward (SF)</option>
+                                <option value="PF">Power Forward (PF)</option>
+                                <option value="C">Center (C)</option>
+                            </select>
+                        </div>
+
+                        <!-- Player 1 Search (underneath filters) -->
+                        <div class="mb-3">
+                            <label for="player1SearchInput" class="form-label">Or Search Specific Player:</label>
+                            <div class="position-relative">
+                                <input 
+                                    type="text" 
+                                    id="player1SearchInput" 
+                                    class="form-control" 
+                                    placeholder="Search for a specific player..."
+                                    autocomplete="off"
+                                >
+                                <div id="player1Dropdown" class="dropdown-menu w-100" style="max-height: 200px; overflow-y: auto; display: none;"></div>
+                                <input type="hidden" id="player1Select" value="">
+                            </div>
+                        </div>
+
+                        <!-- Player 1 Display -->
+                        <div id="player1Display" class="text-center p-3 bg-light rounded">
+                            <p class="mb-0 text-muted">Random player will be selected from filtered pool</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Center Section with Stat Selection and Compare Button -->
+            <div class="col-lg-2 mb-4 d-flex flex-column justify-content-center align-items-center">
+                <!-- Stat Selection -->
+                <div class="mb-4 w-100">
+                    <label for="statSelect" class="form-label text-center d-block">Compare Stat:</label>
+                    <select id="statSelect" class="form-select text-center">
+                        <option value="">Select a stat...</option>
+                    </select>
+                </div>
+                
+                <!-- Compare Button -->
+                <button id="compareButton" class="btn btn-success btn-lg px-4 py-3" disabled>
+                    <i class="fas fa-balance-scale me-2"></i>
+                    <div class="d-block">
+                        <div class="fw-bold">Compare</div>
+                        <div class="fw-bold">Players</div>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Player 2 Section -->
+            <div class="col-lg-5 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-info text-white text-center">
+                        <h4 class="mb-0"><i class="fas fa-user me-2"></i>Player 2</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Player 2 Team Filter -->
+                        <div class="mb-3">
+                            <label for="player2TeamFilter" class="form-label">Filter by Team:</label>
+                            <select id="player2TeamFilter" class="form-select">
+                                <option value="">All Teams</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Player 2 Position Filter -->
+                        <div class="mb-3">
+                            <label for="player2PositionFilter" class="form-label">Filter by Position:</label>
+                            <select id="player2PositionFilter" class="form-select">
+                                <option value="">All Positions</option>
+                                <option value="PG">Point Guard (PG)</option>
+                                <option value="SG">Shooting Guard (SG)</option>
+                                <option value="SF">Small Forward (SF)</option>
+                                <option value="PF">Power Forward (PF)</option>
+                                <option value="C">Center (C)</option>
+                            </select>
+                        </div>
+
+                        <!-- Player 2 Search (underneath filters) -->
+                        <div class="mb-3">
+                            <label for="player2SearchInput" class="form-label">Or Search Specific Player:</label>
+                            <div class="position-relative">
+                                <input 
+                                    type="text" 
+                                    id="player2SearchInput" 
+                                    class="form-control" 
+                                    placeholder="Search for a specific player..."
+                                    autocomplete="off"
+                                >
+                                <div id="player2Dropdown" class="dropdown-menu w-100" style="max-height: 200px; overflow-y: auto; display: none;"></div>
+                                <input type="hidden" id="player2Select" value="">
+                            </div>
+                        </div>
+
+                        <!-- Player 2 Display -->
+                        <div id="player2Display" class="text-center p-3 bg-light rounded">
+                            <p class="mb-0 text-muted">Random player will be selected from filtered pool</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div id="arenaResult"></div>
+            </div>
+        </div>
+    </div>
+</section>
