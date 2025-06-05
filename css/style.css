@@ -1,7 +1,7 @@
 /* Custom Font Variables */
 :root {
-    --primary-font: 'Roboto', sans-serif;
-    --brand-font: 'Orbitron', monospace;
+    --primary-font: "Roboto", sans-serif;
+    --brand-font: "Orbitron", monospace;
     --primary-color: #0d6efd;
     --secondary-color: #6c757d;
     --success-color: #198754;
@@ -32,10 +32,18 @@ body {
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6;
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 15px #0073e6,
+            0 0 20px #0073e6;
     }
     to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 25px #0073e6, 0 0 30px #0073e6;
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 25px #0073e6,
+            0 0 30px #0073e6;
     }
 }
 
@@ -198,13 +206,18 @@ main.container {
 }
 
 .btn::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
     transition: left 0.5s;
 }
 
@@ -268,14 +281,16 @@ main.container {
 
 #tab-arena .card {
     border: 2px solid transparent;
-    background: linear-gradient(white, white) padding-box,
-                var(--gradient-primary) border-box;
+    background:
+        linear-gradient(white, white) padding-box,
+        var(--gradient-primary) border-box;
     transition: all 0.3s ease;
 }
 
 #tab-arena .card:hover {
-    background: linear-gradient(white, white) padding-box,
-                var(--gradient-secondary) border-box;
+    background:
+        linear-gradient(white, white) padding-box,
+        var(--gradient-secondary) border-box;
     transform: scale(1.02);
 }
 
@@ -291,8 +306,144 @@ main.container {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Basketball Loading Animation */
+.basketball-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    animation: fadeOut 0.5s ease-out 1s forwards;
+}
+
+.basketball-loader.hide {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.basketball {
+    width: 80px;
+    height: 80px;
+    background: #ff6b35;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    animation: bounce-basketball 2s ease-in-out infinite;
+    box-shadow: 
+        inset -5px -5px 10px rgba(0, 0, 0, 0.2),
+        inset 5px 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.basketball::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 2px;
+    background: #000;
+    border-radius: 2px;
+}
+
+.basketball::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 70px;
+    height: 2px;
+    background: #000;
+    border-radius: 2px;
+}
+
+@keyframes bounce-basketball {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+}
+
+.basketball-loader-text {
+    color: white;
+    font-family: var(--brand-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: pulse-text 2s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse-text {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+.basketball-loader-dots {
+    color: white;
+    font-size: 2rem;
+    margin-top: 10px;
+    animation: loading-dots 3s infinite;
+}
+
+@keyframes loading-dots {
+    0% {
+        content: '';
+    }
+    20% {
+        content: '.';
+    }
+    40% {
+        content: '..';
+    }
+    60% {
+        content: '...';
+    }
+    80% {
+        content: '...';
+    }
+    100% {
+        content: '';
+    }
+}
+
+.basketball-loader-dots::after {
+    content: '';
+    animation: loading-dots 3s infinite;
 }
 
 /* Responsive Design */
@@ -300,16 +451,16 @@ main.container {
     .navbar-brand {
         font-size: 1.2rem;
     }
-    
+
     .card:hover {
         transform: translateY(-5px) scale(1.01);
     }
-    
+
     main.container {
         margin: 1rem;
         border-radius: 15px;
     }
-    
+
     .btn {
         font-size: 0.875rem;
         padding: 0.5rem 1rem;
@@ -320,11 +471,11 @@ main.container {
     .navbar-brand {
         font-size: 1rem;
     }
-    
+
     .card {
         margin-bottom: 1rem;
     }
-    
+
     .dropdown-item {
         padding: 0.5rem;
         font-size: 0.875rem;
@@ -380,13 +531,18 @@ main.container {
 }
 
 .team-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
     transition: left 0.8s;
     z-index: 1;
 }
@@ -399,8 +555,6 @@ main.container {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
-
-/* Removed image-specific styles - no longer needed */
 
 /* Stats Container */
 .stats-container {
@@ -444,7 +598,11 @@ main.container {
 
 /* Comparison Header */
 .comparison-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
     border-radius: 15px 15px 0 0;
     padding: 1.5rem;
     color: white;
@@ -453,7 +611,11 @@ main.container {
 
 /* Enhanced Player Display */
 .player-display {
-    background: linear-gradient(135deg, rgba(248, 249, 250, 0.9), rgba(255, 255, 255, 0.9));
+    background: linear-gradient(
+        135deg,
+        rgba(248, 249, 250, 0.9),
+        rgba(255, 255, 255, 0.9)
+    );
     border: 2px dashed #dee2e6;
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -461,7 +623,11 @@ main.container {
 
 .player-display:hover {
     border-color: var(--primary-color);
-    background: linear-gradient(135deg, rgba(13, 110, 253, 0.05), rgba(248, 249, 250, 0.95));
+    background: linear-gradient(
+        135deg,
+        rgba(13, 110, 253, 0.05),
+        rgba(248, 249, 250, 0.95)
+    );
 }
 
 /* Player Card Header Styling */
@@ -476,8 +642,12 @@ main.container {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Icon Enhancements */
@@ -486,7 +656,10 @@ main.container {
 }
 
 @keyframes bounce {
-    0%, 20%, 60%, 100% {
+    0%,
+    20%,
+    60%,
+    100% {
         transform: translateY(0);
     }
     40% {
@@ -555,19 +728,19 @@ main.container {
     .team-card:hover {
         transform: translateY(-4px) scale(1.01);
     }
-    
+
     .stats-container {
         padding: 0.5rem;
     }
-    
+
     .stat-row .badge {
         font-size: 0.7rem;
     }
-    
+
     .arena-comparison .stat-value {
         font-size: 2rem;
     }
-    
+
     .arena-player-initials {
         font-size: 1.5rem;
     }
