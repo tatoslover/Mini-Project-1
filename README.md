@@ -2,7 +2,6 @@
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/tatoslover/Mini-Project-1)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-brightgreen?logo=netlify)](https://nbaadvancedstatattack.netlify.app)
 
-
 Explore, filter, and compare NBA player stats with dynamic charts and team-themed visuals.
 
 - 🧠 Powered by [NBA REST API](https://www.nba.com/stats/api) (~500 players)
