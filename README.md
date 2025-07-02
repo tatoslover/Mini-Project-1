@@ -1,4 +1,4 @@
-## 🏀 NBA 2K Stat Attack
+## 🏀 NBA Advanced Stat Attack
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/tatoslover/Mini-Project-1)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-brightgreen?logo=netlify)](https://nbaadvancedstatattack.netlify.app)
 
