@@ -1,14 +1,39 @@
-## 🏀 NBA Advanced Stat Attack
+# 🏀 NBA 2K Stat Attack
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/tatoslover/Mini-Project-1)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-brightgreen?logo=netlify)](https://nbaadvancedstatattack.netlify.app)
 
 Explore, filter, and compare NBA player stats with dynamic charts and team-themed visuals.
 
-- 🧠 Powered by [NBA REST API](https://www.nba.com/stats/api) (~500 players)
-- 📊 Built with Bootstrap 5, Chart.js, vanilla JS
-- ⚡ Fast, responsive, animated interface
+## 🚀 **Key Technologies**
+- 🧠 **Data Source**: [NBA REST API](https://www.nba.com/stats/api) (~500 players)
+- 📊 **Frontend**: Bootstrap 5, Chart.js, Vanilla JavaScript
+- ⚡ **Features**: Fast, responsive, animated interface
 
-## Project File Structure Overview
+## 🎯 **Core Features**
+- **Player Statistics Explorer**: Browse and filter 500+ NBA players by team, position, and performance metrics
+- **Interactive Data Visualization**: Dynamic Chart.js charts showing team performance, position distribution, and top performers
+- **Head-to-Head Arena**: Compare any two players with detailed statistical analysis
+- **Team-Themed Design**: Custom styling with authentic NBA team colors for all 30 teams
+- **Advanced Filtering**: Real-time search, multi-criteria filtering, and performance-based sorting
+
+## 🚀 **Getting Started**
+
+### Option 1: Quick Demo
+```bash
+# Clone the repository
+git clone https://github.com/tatoslover/Mini-Project-1.git
+cd Mini-Project-1
+
+# Open in browser
+open index.html
+```
+
+### Live Demo
+🌐 **[View Live Demo](https://nbaadvancedstatattack.netlify.app)**
+
+---
+
+## 📁 **Project Structure**
 
 ### Root Files
 - `index.html` - Main entry point with Bootstrap navbar and dynamic content container
@@ -117,10 +142,10 @@ Explore, filter, and compare NBA player stats with dynamic charts and team-theme
 
 ---
 
-## 🎯 Key Features & Functionality
+## 🛠️ **Technical Features**
 
 <details>
-<summary>⚙️ Performance Optimizations</summary>
+<summary>⚡ Performance Optimizations</summary>
 
 - Basketball loading animation (1.5s delay) for better UX
 - Caching system for API calls
@@ -129,7 +154,7 @@ Explore, filter, and compare NBA player stats with dynamic charts and team-theme
 </details>
 
 <details>
-<summary>📈 Data Visualization</summary>
+<summary>📊 Data Visualization</summary>
 
 - Chart.js integration for interactive charts
 - Team performance analytics
@@ -138,7 +163,7 @@ Explore, filter, and compare NBA player stats with dynamic charts and team-theme
 </details>
 
 <details>
-<summary>📱 User Experience</summary>
+<summary>🎨 User Experience</summary>
 
 - Mobile-responsive design with Bootstrap 5
 - Smooth animations and transitions
@@ -148,7 +173,7 @@ Explore, filter, and compare NBA player stats with dynamic charts and team-theme
 </details>
 
 <details>
-<summary>🧱 Technical Architecture</summary>
+<summary>🏗️ Technical Architecture</summary>
 
 - Single-page application with dynamic routing
 - Modular JavaScript architecture
